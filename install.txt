@@ -1,0 +1,30 @@
+pre-requirements (without whitelisting):
+deploy daiproxylight.sol on the blockchain. 
+Constructor argument: dai token address.
+
+Set up new DApp in the biconomy dashboard.
+In the DApp, add the Dai contract and the DaiProxyLight contract.
+Add the following Apis methods:
+
+Dai Contract: permit
+DaiProxyLight: executeMetaTransactions
+save everything.
+
+register an infura project.
+
+
+edit conig.js (see config.js.example):
+config.data = {
+    infura: "<infura api key>", 
+    tokenName: "DAI",
+    apiKey: "<biconomy api key>", 
+    chainId: "<chain id>",
+    tokenAddress: "<dai address>",
+    tokenAbi: [{..dai abi..}],
+    proxyAddress: "<DaiProxyLight address>",
+    proxyAbi: [{..daiproxylight abi..}]
+}
+
+Run the application:
+npm install
+npm start

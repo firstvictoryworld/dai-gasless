@@ -1,0 +1,42 @@
+$backgroundcolor: #fff;
+$headercolor: rgb(192, 177, 177);
+$maincolor: rgb(156, 151, 151);
+$footercolor: rgb(204, 202, 202);
+
+@mixin main($color) {
+    width: 80%;
+    background-color: $color;
+}
+
+
+#root {
+    height: 100%;
+}
+
+body{
+    margin: 0 !important;
+}
+
+.app {
+    height: 100%;
+    display: flex;
+    position: relative;
+    background-color: $backgroundcolor;
+    justify-content: center;
+
+    .appBox{
+        width: 100%;
+
+        .header {
+            @include main($headercolor);    
+        }
+    
+        .home {
+            @include main($maincolor);
+        }
+    
+        .footer {
+            @include main($footercolor);
+        }    
+    }    
+}
